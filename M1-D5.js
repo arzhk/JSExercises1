@@ -122,7 +122,6 @@ deleteOne("Elephant", false);
 */
 
 let onlyLetters = (x) => {
-  console.log("Starting String: ", x);
   if (typeof x === "string") {
     onlyLetters = x.split(" ");
     let wordsWithNoNumbers = [];
@@ -131,10 +130,8 @@ let onlyLetters = (x) => {
 
     for (let i = 0; i < onlyLettersArrayLength; i++) {
       let noNumbers = [];
-      console.log("onlyletters", onlyLetters[i]);
       if (isNaN(parseInt(onlyLetters[i]))) {
         noNumbers.push(onlyLetters[i]);
-        console.log("noNumbers", noNumbers);
       }
 
       if (noNumbers.length > 0) wordsWithNoNumbers.push(noNumbers.join(""));
@@ -219,6 +216,28 @@ rollTheDices(2);
 /* Ex.10
    Write the function IsTodayMyBDay that returns true if it's your birthday, false otherwise
 */
+
+let isTodayMyBirthday = () => {
+  let myBirthday = "02/10";
+  let today = new Date();
+  let dayHolder = String(today.getDate());
+  let day = dayHolder;
+  let month = String(today.getMonth() + 1);
+
+  if (day < 10) {
+    day = "0" + dayHolder;
+  }
+  today = day + "/" + month;
+
+  if (today === myBirthday) {
+    return (isTodayMyBirthday = true);
+  } else {
+    return (isTodayMyBirthday = false);
+  }
+};
+
+isTodayMyBirthday();
+console.log(isTodayMyBirthday);
 
 // JS Arrays // Objs
 // NOTE: movies array is defined at the end of the file
