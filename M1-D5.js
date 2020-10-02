@@ -88,6 +88,12 @@ whoIsBigger(6, 5);
     Ex. SplitMe("I love coding") => returns [ "I","Love","Coding"]
 */
 
+let splitMe = (x) => {
+  return (splitMe = x.split(" "));
+};
+
+splitMe("test string please split this");
+
 /* Ex.4
     Write the function DeleteOne that receives a string and a boolean. If the boolean is true, should return the string without the first letter, otherwise should remove the last one
 */
