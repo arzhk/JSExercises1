@@ -62,14 +62,12 @@ Me.Skills.pop();
     Write the function Dice that randomize an integer number between 1 and 6
 */
 
-let diceRoll;
-
-Dice = (x) => {
+let diceRoll = () => {
   diceRoll = Math.floor(Math.random() * 6);
   return diceRoll;
 };
 
-Dice();
+diceRoll();
 
 /* Ex.2 
     Write the function WhoIsBigger that receives 2 numbers and returns the bigger of the 2
