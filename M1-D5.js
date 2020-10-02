@@ -63,7 +63,7 @@ Me.Skills.pop();
 */
 
 let diceRoll = () => {
-  diceRoll = Math.floor(Math.random() * 6);
+  diceRoll = Math.floor(Math.random() * 6) + 1;
   return diceRoll;
 };
 
@@ -192,6 +192,25 @@ whatDayIsIt();
         values: [ 3, 3, 4]
     }
 */
+
+let rollTheDices = (x) => {
+  let diceObject = {};
+  let diceRolls = [];
+  let diceSumHolder = 0;
+
+  for (let i = 0; i < x; i++) {
+    let roll = Math.floor(Math.random() * 6) + 1;
+    diceRolls.push(roll);
+    diceSumHolder = diceSumHolder + diceRolls[i];
+  }
+
+  diceObject["Sum of Dice"] = diceSumHolder;
+  diceObject["Dice Rolls"] = diceRolls;
+
+  return (rollTheDices = diceObject);
+};
+
+rollTheDices(2);
 
 /* Ex.9
    Write the function HowManyDays that receives a Date and return the number of days that has passed since that day.
