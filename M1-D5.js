@@ -97,11 +97,24 @@ let splitMe = (x) => {
 };
 
 splitMe("hello this is a test sentence");
-console.log(splitMe);
 
 /* Ex.4
     Write the function DeleteOne that receives a string and a boolean. If the boolean is true, should return the string without the first letter, otherwise should remove the last one
 */
+
+let deleteOne = (x, y) => {
+  if (typeof x === "string" && typeof y === "boolean") {
+    if (y === true) {
+      return (deleteOne = x.slice(1));
+    } else {
+      return (deleteOne = x.slice(0, -1));
+    }
+  } else {
+    return (deleteOne = "You did not enter a string followed by a boolean");
+  }
+};
+
+deleteOne("Elephant", false);
 
 /* Ex.5
    Write the function OnlyLetters that receives a string, removes all the numbers and returns it.
