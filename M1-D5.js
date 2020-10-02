@@ -89,10 +89,15 @@ whoIsBigger(6, 5);
 */
 
 let splitMe = (x) => {
-  return (splitMe = x.split(" "));
+  if (typeof x === "string") {
+    return (splitMe = x.split(" "));
+  } else {
+    return (splitMe = "You did not enter a string");
+  }
 };
 
-splitMe("test string please split this");
+splitMe("hello this is a test sentence");
+console.log(splitMe);
 
 /* Ex.4
     Write the function DeleteOne that receives a string and a boolean. If the boolean is true, should return the string without the first letter, otherwise should remove the last one
