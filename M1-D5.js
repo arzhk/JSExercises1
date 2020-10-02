@@ -49,9 +49,13 @@ delete Me.Age;
    Programmatically add to the object Me an array "skills" that contains the programming languages that you know
 */
 
+Me.Skills = ["Javascript", "soontm", "soontm"];
+
 /* Ex.G 
    Programmatically remove the last skill from the array "skills" inside of the "me" object
 */
+
+Me.Skills.pop();
 
 // JS Functions
 /* Ex.1
