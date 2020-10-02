@@ -73,6 +73,16 @@ diceRoll();
     Write the function WhoIsBigger that receives 2 numbers and returns the bigger of the 2
 */
 
+let whoIsBigger = (x, y) => {
+  if (x > y) {
+    return (whoIsBigger = x);
+  } else {
+    return (whoIsBigger = y);
+  }
+};
+
+whoIsBigger(6, 5);
+
 /* Ex.3
     Write the function SplitMe that receives a String and returns an array with every word in that string
     Ex. SplitMe("I love coding") => returns [ "I","Love","Coding"]
