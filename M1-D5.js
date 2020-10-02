@@ -117,13 +117,47 @@ let deleteOne = (x, y) => {
 deleteOne("Elephant", false);
 
 /* Ex.5
-   Write the function OnlyLetters that receives a string, removes all the numbers and returns it.
+   Write the function OnlyLetters that receives a string, removes all the numbers and returns it. (COME BACK TO THIS ONE)
    Ex.: OnlyLetters("I love 123 whatever")  => returns "I love whatever"
 */
+
+let onlyLetters = (x) => {
+  console.log("Starting String: ", x);
+  if (typeof x === "string") {
+    onlyLetters = x.split(" ");
+    let wordsWithNoNumbers = [];
+
+    let onlyLettersArrayLength = onlyLetters.length;
+
+    for (let i = 0; i < onlyLettersArrayLength; i++) {
+      let noNumbers = [];
+      console.log("onlyletters", onlyLetters[i]);
+      if (isNaN(parseInt(onlyLetters[i]))) {
+        noNumbers.push(onlyLetters[i]);
+        console.log("noNumbers", noNumbers);
+      }
+
+      if (noNumbers.length > 0) wordsWithNoNumbers.push(noNumbers.join(""));
+    }
+    onlyLetters = wordsWithNoNumbers;
+    return onlyLetters.join(" ");
+  } else {
+    return (onlyLetters = "You did not enter a string");
+  }
+};
+
+onlyLetters("this 1222 is 123 a test 123 sentence");
 
 /* Ex.6 
    Write the function IsThisAnEmail that receives a string and returns true if the string is a valid email.
 */
+
+let isThisAnEmail = (x) => {
+  const checkChars = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return (isThisAnEmail = checkChars.test(x));
+};
+
+isThisAnEmail("test@test.com");
 
 /* Ex.7
    Write the function WhatDayIsIt that should return the day of the week
