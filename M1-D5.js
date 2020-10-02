@@ -163,6 +163,27 @@ isThisAnEmail("test@test.com");
    Write the function WhatDayIsIt that should return the day of the week
 */
 
+let whatDayIsIt = () => {
+  let daysOfTheWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let newDate = new Date();
+  let day = daysOfTheWeek[String(newDate.getDay())];
+
+  newDate = day;
+
+  whatDayIsIt = newDate;
+};
+
+whatDayIsIt();
+
 /* Ex.8
     Write the function RollTheDices that receives a numeric input and returns an object that contains both the sum of the value of the dices and the dices itself
     This function should use the Dice function defined in Ex1
