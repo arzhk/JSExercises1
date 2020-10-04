@@ -472,6 +472,19 @@ getMovieById(1);
     Write the function SumYears that returns the sum of the years the movie has been produced
 */
 
+let sumYears = () => {
+  let sumHold = 0;
+
+  for (let i = 0; i < movies.length; i++) {
+    let currentNum = movies[i].Year;
+    sumHold = sumHold + parseInt(currentNum);
+  }
+
+  return sumHold;
+};
+
+sumYears();
+
 /* Ex.18
     Write the function SearchMovie that receives a string and returns all the movies with that string in the title
 */
