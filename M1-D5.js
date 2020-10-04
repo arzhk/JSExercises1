@@ -252,21 +252,19 @@ isTodayMyBirthday();
    Write the function DeleteProp that receives an object and a string, and returns the object after deleting the property with that given name
 */
 
-let testObject = {
-  name: "a",
-  surname: "a",
-  age: 20,
-  email: "test@test.com",
+let testObject = { name: "b", surname: "b", age: 30, email: "test@test.com" };
+
+let deleteProp2 = (obj, prop) => {
+  let objectPull = {};
+  if (obj === testObject) {
+    objectPull = obj;
+  }
+
+  delete objectPull[prop];
+  return objectPull;
 };
 
-let otherObject = {
-  name: "b",
-  surname: "b",
-  age: 30,
-  email: "test@test.com",
-};
-
-console.log();
+console.log(deleteProp2(testObject, "name"));
 
 /* Ex.12 
     Write the function OlderMovie that finds the older movie in the array
