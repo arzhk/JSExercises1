@@ -534,7 +534,7 @@ let halfTree = (x) => {
   return x;
 };
 
-console.log(halfTree(5));
+halfTree(5);
 
 /* Ex.22 
   Create a function Tree that receives the height and creates an "*" tree with that height
@@ -548,3 +548,22 @@ console.log(halfTree(5));
 /* Ex.23
   Create a function IsItPrime that receives a number and return true if the number is a prime number
 */
+
+let isItPrime = (x) => {
+  let numberHold = 1;
+  let numberArray = [];
+
+  for (let i = 0; i < x + 1; i++) {
+    if (x % numberHold == 0) {
+      numberArray.push(numberHold);
+    }
+    numberHold++;
+  }
+  if (numberArray.length < 3) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+isItPrime(13);
