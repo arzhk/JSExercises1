@@ -454,6 +454,20 @@ onlyThisMillennium();
     Write the function GetMovieById that receives an ID and returns the movie with the given ID
 */
 
+let getMovieById = (x) => {
+  let getMovie = {};
+
+  if (typeof x === "number") {
+    getMovie = movies[x];
+  } else {
+    console.log("You did not enter a number");
+    return false;
+  }
+  return getMovie;
+};
+
+getMovieById(1);
+
 /* Ex.17
     Write the function SumYears that returns the sum of the years the movie has been produced
 */
