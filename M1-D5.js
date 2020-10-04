@@ -523,6 +523,19 @@ deleteX(7);
   ***
 */
 
+let halfTree = (x) => {
+  let treeArray = [];
+
+  for (let i = 0; i < x; i++) {
+    treeArray.push("*");
+    let tree = treeArray.join("");
+    console.log(tree);
+  }
+  return x;
+};
+
+console.log(halfTree(5));
+
 /* Ex.22 
   Create a function Tree that receives the height and creates an "*" tree with that height
   Example: 
