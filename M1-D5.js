@@ -406,6 +406,12 @@ olderMovie();
     Write the function CountMovies that returns the number of movies into the array
 */
 
+let countMovies = () => {
+  return (countMovies = movies.length);
+};
+
+countMovies();
+
 /* Ex.14
     Write the function OnlyTitles that creates an array with only the titles of the movies
 */
