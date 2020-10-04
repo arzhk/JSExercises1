@@ -416,6 +416,18 @@ countMovies();
     Write the function OnlyTitles that creates an array with only the titles of the movies
 */
 
+let onlyTitles = () => {
+  let movieTitles = []; // Create a new array for the elements to be pushed to
+  for (let i = 0; i < movies.length; i++) {
+    // Create a loop that runs for every index of the first array
+    let currentTitle = movies[i].Title; // Pull the title from the first arrays index and set it to a variable
+    movieTitles.push(currentTitle); // Push the title stored in the variable into the second array
+  }
+  return movieTitles;
+};
+
+onlyTitles();
+
 /* Ex.15
    Write the function OnlyThisMillennium that returns only the movies produced in this millennium
 */
