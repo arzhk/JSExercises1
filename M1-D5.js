@@ -264,67 +264,7 @@ let deleteProp2 = (obj, prop) => {
   return objectPull;
 };
 
-console.log(deleteProp2(testObject, "name"));
-
-/* Ex.12 
-    Write the function OlderMovie that finds the older movie in the array
-*/
-
-/* Ex.13
-    Write the function CountMovies that returns the number of movies into the array
-*/
-
-/* Ex.14
-    Write the function OnlyTitles that creates an array with only the titles of the movies
-*/
-
-/* Ex.15
-   Write the function OnlyThisMillennium that returns only the movies produced in this millennium
-*/
-
-/* Ex.16 
-    Write the function GetMovieById that receives an ID and returns the movie with the given ID
-*/
-
-/* Ex.17
-    Write the function SumYears that returns the sum of the years the movie has been produced
-*/
-
-/* Ex.18
-    Write the function SearchMovie that receives a string and returns all the movies with that string in the title
-*/
-
-/* Ex.19
-    Write the function SearchAndDivide that receives a string and returns an object with an array "match" with all the movies that contains the title and another array "nonMatch" with the other movies
-*/
-
-/* Ex.20
-   Write the function DeleteX that receives a number and returns an array without the element in that position
-*/
-
-// JS Advanced
-
-/* Ex.21
-  Create a function HalfTree that recives the height creates an "*" half tree with that height
-  Example:
-  HalfTree(3)
-  *
-  **
-  ***
-*/
-
-/* Ex.22 
-  Create a function Tree that receives the height and creates an "*" tree with that height
-  Example: 
-  Tree(3)
-    *  
-   *** 
-  *****
-*/
-
-/* Ex.23
-  Create a function IsItPrime that receives a number and return true if the number is a prime number
-*/
+deleteProp2(testObject, "name");
 
 /* Movies array is an example array, used for the exs. Don't change it :)  */
 const movies = [
@@ -441,3 +381,79 @@ const movies = [
       "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg",
   },
 ];
+
+/* Ex.12 
+    Write the function OlderMovie that finds the older movie in the array
+*/
+
+let olderMovie = () => {
+  let result = { Year: 2100 }; // Setting starting point for first comparison
+
+  for (let i = 0; i < movies.length; i++) {
+    let movie = movies[i]; // Sets new variable to be equal to the index movies object
+    let currentYear = parseInt(movie.Year); // Convert the property to a number and set a new variable to be equal to the year property
+    if (currentYear < result.Year) {
+      // Check the starting year to the year contained in currentYear
+      result = movie; // If the year in currentYear is lower than the year in result, it replaces the number for a new lower point
+    }
+  }
+  return result; // Returns final value in result
+};
+
+olderMovie();
+
+/* Ex.13
+    Write the function CountMovies that returns the number of movies into the array
+*/
+
+/* Ex.14
+    Write the function OnlyTitles that creates an array with only the titles of the movies
+*/
+
+/* Ex.15
+   Write the function OnlyThisMillennium that returns only the movies produced in this millennium
+*/
+
+/* Ex.16 
+    Write the function GetMovieById that receives an ID and returns the movie with the given ID
+*/
+
+/* Ex.17
+    Write the function SumYears that returns the sum of the years the movie has been produced
+*/
+
+/* Ex.18
+    Write the function SearchMovie that receives a string and returns all the movies with that string in the title
+*/
+
+/* Ex.19
+    Write the function SearchAndDivide that receives a string and returns an object with an array "match" with all the movies that contains the title and another array "nonMatch" with the other movies
+*/
+
+/* Ex.20
+   Write the function DeleteX that receives a number and returns an array without the element in that position
+*/
+
+// JS Advanced
+
+/* Ex.21
+  Create a function HalfTree that recives the height creates an "*" half tree with that height
+  Example:
+  HalfTree(3)
+  *
+  **
+  ***
+*/
+
+/* Ex.22 
+  Create a function Tree that receives the height and creates an "*" tree with that height
+  Example: 
+  Tree(3)
+    *  
+   *** 
+  *****
+*/
+
+/* Ex.23
+  Create a function IsItPrime that receives a number and return true if the number is a prime number
+*/
