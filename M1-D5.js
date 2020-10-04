@@ -497,6 +497,21 @@ sumYears();
    Write the function DeleteX that receives a number and returns an array without the element in that position
 */
 
+let numArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+let deleteX = (x) => {
+  let holdNumArray = [];
+
+  for (let i = 0; i < numArray.length; i++) {
+    if (x !== numArray[i]) {
+      holdNumArray.push(numArray[i]);
+    }
+  }
+  return holdNumArray;
+};
+
+deleteX(7);
+
 // JS Advanced
 
 /* Ex.21
