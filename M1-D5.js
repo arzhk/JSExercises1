@@ -432,6 +432,24 @@ onlyTitles();
    Write the function OnlyThisMillennium that returns only the movies produced in this millennium
 */
 
+let onlyThisMillennium = () => {
+  let currentMillennium = 2000;
+  let millenniumArray = [];
+  let oldMovies = [];
+  for (let i = 0; i < movies.length; i++) {
+    let movieYear = movies[i].Year;
+    if (movieYear > 1999) {
+      millenniumArray.push(movies[i]);
+    } else {
+      oldMovies.push(movies[i]);
+    }
+  }
+
+  return millenniumArray;
+};
+
+onlyThisMillennium();
+
 /* Ex.16 
     Write the function GetMovieById that receives an ID and returns the movie with the given ID
 */
