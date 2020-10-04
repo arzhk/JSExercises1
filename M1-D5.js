@@ -213,6 +213,13 @@ rollTheDices(2);
    Write the function HowManyDays that receives a Date and return the number of days that has passed since that day.
 */
 
+let HowManyDays = (dateInput) => {
+  let today = new Date();
+  return (HowManyDays = (today - dateInput) / (1000 * 60 * 60 * 24));
+};
+
+HowManyDays(new Date(2019, 10, 04));
+
 /* Ex.10
    Write the function IsTodayMyBDay that returns true if it's your birthday, false otherwise
 */
@@ -237,7 +244,6 @@ let isTodayMyBirthday = () => {
 };
 
 isTodayMyBirthday();
-console.log(isTodayMyBirthday);
 
 // JS Arrays // Objs
 // NOTE: movies array is defined at the end of the file
@@ -245,6 +251,22 @@ console.log(isTodayMyBirthday);
 /* Ex.11
    Write the function DeleteProp that receives an object and a string, and returns the object after deleting the property with that given name
 */
+
+let testObject = {
+  name: "a",
+  surname: "a",
+  age: 20,
+  email: "test@test.com",
+};
+
+let otherObject = {
+  name: "b",
+  surname: "b",
+  age: 30,
+  email: "test@test.com",
+};
+
+console.log();
 
 /* Ex.12 
     Write the function OlderMovie that finds the older movie in the array
