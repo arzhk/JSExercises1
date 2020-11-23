@@ -545,6 +545,17 @@ halfTree(5);
   *****
 */
 
+function tree(n) {
+  let space = " ";
+  let char = "*";
+
+  for (let i = 1; i < n + 1; i++) {
+    console.log(space.repeat(n - 1) + char.repeat(i * 2 - 1));
+  }
+}
+
+tree(3);
+
 /* Ex.23
   Create a function IsItPrime that receives a number and return true if the number is a prime number
 */
